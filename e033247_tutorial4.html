@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Tutorial 4</title>
+    <style>
+        img {
+            border: none;
+            transition: border 0.3s ;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="color:blue;">JavaScript Tutorial 4</h2>
+
+    <button onclick="showImage('view', 'images/view.jpg')">My View</button>
+    <button onclick="showImage('house', 'images/house.png')">My House</button>
+    <button onclick="showImage('hobby', 'images/hobby.jpg')">My Hobby</button>
+    <button onclick="this.innerHTML = Date()">Current Time</button>
+    <button onclick="window.print()">Print Page</button>
+    <br>
+
+    <img id="view" src="" />
+    <img id="house" src="" />
+    <img id="hobby" src="" />
+
+    <script>
+        function showImage(id, src) {
+            const img = document.getElementById(id);
+            img.src = src;
+            img.style.border = "3px solid black";
+            img.style.borderRadius = "10px"
+            img.style.width = "400px"
+            img.style.height = "400px"
+        }
+    </script>
+</body>
+</html>
